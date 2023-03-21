@@ -1,12 +1,12 @@
 import { HOME, TEST } from "../@shared/constant";
 
-const globalActions = (state = { "message": "Jehovanie, You must winner!" }, action) => {
+const globalActions = (state = { "message": "Jehovanie, first project:!" }, action) => {
 
     switch (action.type) {
         case HOME:
             return { ...state }
         case TEST:
-            return { ...state, "message": "Jehovanie, Never give up!!! " }
+            return { ...state, "message": "E-clo-varotra" }
         default:
             return { ...state }
     }

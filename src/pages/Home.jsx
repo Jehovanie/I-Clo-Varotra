@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { HOME, TEST } from "../redux/@shared/constant";
+import { FaBeer } from "@react-icons/all-files/fa/FaBeer";
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -13,8 +14,13 @@ const Home = () => {
 
     return (
         <div>
-            <h4>{globalAction?.message}</h4>
-            <button onClick={handleClick}> next</button>
+            <h1 className="text-3xl font-bold underline">
+            {globalAction?.message}
+            </h1>
+            <button className="rounded-full" onClick={handleClick}>
+                next
+                <FaBeer />
+            </button>
         </div>
     );
 };
