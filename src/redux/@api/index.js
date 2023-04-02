@@ -10,4 +10,4 @@ url.interceptors.request.use((req) => {
 })
 
 
-export const login = (form_data) => url.post("/siging")
+export const login = (form_data) => url.post("/siging", form_data)

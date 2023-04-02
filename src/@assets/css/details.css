@@ -1,0 +1,11 @@
+.content_modal_body {
+    width: 100vw;
+}
+
+.image_details {
+    width: 60% !important;
+}
+
+.content_description {
+    width: 40% !important;
+}

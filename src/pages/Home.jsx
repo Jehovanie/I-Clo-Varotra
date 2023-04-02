@@ -20,7 +20,7 @@ const Home = () => {
             </div>
 
             <div className="content_global">
-                <div className="grid lg:grid-cols-4 md:grid-cols-4 sm:grid-cols-2 xs:grid-cols-1 lg:gap-3 md:gap-2">
+                <div className="grid xlg:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 lg:gap-3 md:gap-2 sm:gap-4">
                     <Card image={produit1} name="Lorem Impsum" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quas optio nam perferendis possimus, soluta odio accusantium illo assumenda id quaerat minima dolor omnis vero delectus praesentium! Ex, tenetur amet" note={2} price={150} />
                     <Card image={produit1} name="Lorem Impsum" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quas optio nam perferendis possimus, soluta odio accusantium illo assumenda id quaerat minima dolor omnis vero delectus praesentium! Ex, tenetur amet" note={3.1} price={150} />
                     <Card image={produit1} name="Lorem Impsum" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quas optio nam perferendis possimus, soluta odio accusantium illo assumenda id quaerat minima dolor omnis vero delectus praesentium! Ex, tenetur amet" note={5.1} price={150} />

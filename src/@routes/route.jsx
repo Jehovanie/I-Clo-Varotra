@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
+import Details from "../@shared/components/Details";
 import App from "../App";
+import Baute from "../pages/Baute";
 import Home from "../pages/Home";
-import Signin from "../pages/Signin";
-import Signup from "../pages/Signup";
-import home from "./loaders/home";
+import Sport from "../pages/Sport";
+import Technologie from "../pages/Technologie";
 
 
 const router = createBrowserRouter([
@@ -15,12 +16,23 @@ const router = createBrowserRouter([
                 index: true, element: <Home />
             },
             {
-                path: "signin",
-                element: <Signin />,
+                path: "baute",
+                element: <Baute />,
+                children: [
+                    {
+                        path: "details/:bauteId",
+                        element: <Details />
+                    }
+                ]
+
             },
             {
-                path: "signup",
-                element: <Signup />
+                path: "informatique",
+                element: <Technologie />
+            },
+            {
+                path: "sport",
+                element: <Sport />
             }
         ]
     }
