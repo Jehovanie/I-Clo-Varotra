@@ -1,11 +1,14 @@
-.content_modal_body {
-    width: 100vw;
-}
-
 .image_details {
     width: 60% !important;
 }
 
 .content_description {
     width: 40% !important;
+}
+
+.element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
 }

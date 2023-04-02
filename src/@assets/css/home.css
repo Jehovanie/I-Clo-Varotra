@@ -1,5 +1,17 @@
+.content_corp {
+    display: block;
+    width: 80%;
+}
+
 .content_global {
     display: block;
-    width: 80vw;
+    width: 95%;
     margin: 0 auto;
+}
+
+.content_title {
+    display: flex;
+    justify-content: first baseline;
+    align-items: center;
+    font-size: 1.5rem;
 }
