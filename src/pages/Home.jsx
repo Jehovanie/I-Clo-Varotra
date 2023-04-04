@@ -9,11 +9,19 @@ import produit1 from "./../@assets/produit/image1.png"
 import produit2 from "./../@assets/produit/image2.png"
 import { FaShoppingCart } from "react-icons/fa";
 import BuyOne from "../@shared/components/BuyOne";
+import Carousel from "../@shared/components/Carousel";
 const Home = () => {
     const all_categories = [{ link: "/", text: "Tous les categories" }, { link: "baute", text: "Bauté" }, { link: "nformatique", text: "Informatique" }, { link: "sport", text: "Sport" }]
     return (
         <div className="flex">
             <div className="content_corp">
+
+                <div className="content_top px-3 py-4">
+                    <h3> Top 10 </h3>
+                    <hr className="my-2" />
+                    <Carousel image={produit2} name="Produit 2" />
+                </div>
+
                 <div className="container flex flex-wrap items-center justify-center mx-auto">
                     <div className="items-center justify-center hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-language-select">
                         <ul className="flex flex-col p-4 mt-4  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white">
