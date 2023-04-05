@@ -2,12 +2,17 @@ import { useDispatch } from "react-redux";
 import { handlePayment } from "../../@utils/api_airtle";
 import { MdReadMore } from "react-icons/md";
 import { FaShoppingCart } from "react-icons/fa";
+import produit1 from "./../../@assets/produit/image1.png"
+
 
 import "./../../@assets/css/details.css"
-const Card = ({ image, name, description, note, price }) => {
+import { ADD_TO_PANIER } from "../../redux/@shared/constant";
+const Card = ({ product }) => {
 
     const start_note = [];
     const dispatch = useDispatch();
+    ///titre, description, origin, fournisseur, stock, price, image
+    const { id, category, titre: name, description, origin, fournisseur, stock, price, image, note } = product;
     for (let i = 0; i < 5; i++) {
         let only_start = "";
         if (i < note) {
@@ -19,15 +24,17 @@ const Card = ({ image, name, description, note, price }) => {
         start_note.push(only_start);
     }
 
-    const handleClick = (e) => {
-        dispatch(handlePayment({ "order_id": 1, "total_amount": 500, "msisdn": 333005838 }))
+    const addToPannier = (category, id) => {
+
+        dispatch({ type: ADD_TO_PANIER, payload: { category, id } })
     }
+
     return (
         <div className="w-full">
 
             <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="#">
-                    <img className="p-8 rounded-t-lg" src={image} alt={name} />
+                    <img className="p-8 rounded-t-lg" src={produit1} alt={name} />
                 </a>
                 <div className="px-5 pb-5">
                     <a href="#">
@@ -42,9 +49,10 @@ const Card = ({ image, name, description, note, price }) => {
 
                             <button
                                 type="button"
-                                data-modal-target="top-right-modal" data-modal-toggle="top-right-modal"
-                                className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900">
-                                <FaShoppingCart />
+                                className="flex items-center justify-between focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-small rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900"
+                                onClick={() => addToPannier(category, id)}
+                            >
+                                + <FaShoppingCart />
                             </button>
                             <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
                                 <MdReadMore />
@@ -63,24 +71,29 @@ const Card = ({ image, name, description, note, price }) => {
                         {/* Modal body */}
                         <div className="p-2">
                             <div className="w-full flex flex-col items-center bg-white md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800">
-                                <img className="w-full h-100 md:h-auto md:w-1/2" src={image} alt={name} />
+                                <img className="w-full h-100 md:h-auto md:w-1/2" src={produit1} alt={name} />
                                 <div className="flex flex-col p-4 w-full">
                                     <div className="element">
-                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy 2021</h5>
-                                        <p className="price"> 150€ </p>
+                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{name}</h5>
+                                        <p className="value price c-yellow-300 hover:color-yellow-500"> {`${price}€`} </p>
                                     </div>
                                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                                        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                                        {description}
                                     </p>
 
                                     <div className="element">
-                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Origine</h5>
-                                        <p className="price"> Madagascar </p>
+                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Origin</h5>
+                                        <p className="value"> {origin} </p>
                                     </div>
 
                                     <div className="element">
                                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Fournisseur</h5>
-                                        <p className="price"> (+261) 34 79 476 16 </p>
+                                        <p className="value"> {fournisseur} </p>
+                                    </div>
+
+                                    <div className="element">
+                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Stock</h5>
+                                        <p className="value"> {stock} (pieces)</p>
                                     </div>
 
                                 </div>
@@ -89,7 +102,14 @@ const Card = ({ image, name, description, note, price }) => {
                         </div>
                         {/* Modal footer */}
                         <div className="flex justify-end items-center p-2 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                            <button data-modal-hide="defaultModal" type="button" className="text-white bg-yellow-300 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800">Acheter des maintenat</button>
+                            <button
+                                data-modal-hide="defaultModal"
+                                type="button"
+                                className="text-white bg-yellow-300 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800"
+                                onClick={() => addToPannier(category, id)}
+                            >
+                                Acheter des maintenat
+                            </button>
                             {/* <button data-modal-hide="defaultModal" type="button" className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Annuler</button> */}
                         </div>
                     </div>

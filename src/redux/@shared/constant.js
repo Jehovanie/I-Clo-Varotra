@@ -5,5 +5,6 @@ export const LOGOUT = "LOGOUT";
 export const SIGNUP = "SIGNUP";
 
 export const HOME = "HOME";
+export const ADD_TO_PANIER = "ADD_TO_PANIER";
 
 export const TEST = "TEST"

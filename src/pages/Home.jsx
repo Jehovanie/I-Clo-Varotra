@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import Card from "../@shared/components/Card";
 import List from "../@shared/components/List";
 import Navlink from "../@shared/components/Navlink";
@@ -10,13 +9,24 @@ import produit2 from "./../@assets/produit/image2.png"
 import { FaShoppingCart } from "react-icons/fa";
 import BuyOne from "../@shared/components/BuyOne";
 import Carousel from "../@shared/components/Carousel";
+import { useSelector } from "react-redux";
 const Home = () => {
-    const all_categories = [{ link: "/", text: "Tous les categories" }, { link: "baute", text: "Bauté" }, { link: "nformatique", text: "Informatique" }, { link: "sport", text: "Sport" }]
+    const all_categories = [{ link: "/", text: "Tous les categories" }, { link: "baute", text: "Bauté" }, { link: "nformatique", text: "Informatique" }, { link: "sport", text: "Sport" }];
+    const data = useSelector((state) => state.market)
+
+    const all_component_products = data?.products.map((product, key) => (
+        <Card key={key} product={product} />
+    ))
+
+    const all_component_in_panier = data?.panier.products.map((product, key) => (
+        <BuyOne key={key} product={product} />
+    ))
+
     return (
         <div className="flex">
             <div className="content_corp">
 
-                <div className="content_top px-3 py-4">
+                <div className="content_top p-3">
                     <h3> Top 10 </h3>
                     <hr className="my-2" />
                     <Carousel image={produit2} name="Produit 2" />
@@ -32,29 +42,27 @@ const Home = () => {
 
                 <div className="content_global">
                     <div className="grid xlg:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 lg:gap-3 md:gap-2 sm:gap-4">
-                        <Card image={produit1} name="Lorem Impsum" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quas optio nam perferendis possimus, soluta odio accusantium illo assumenda id quaerat minima dolor omnis vero delectus praesentium! Ex, tenetur amet" note={2} price={150} />
-                        <Card image={produit1} name="Lorem Impsum" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quas optio nam perferendis possimus, soluta odio accusantium illo assumenda id quaerat minima dolor omnis vero delectus praesentium! Ex, tenetur amet" note={3.1} price={150} />
-                        <Card image={produit1} name="Lorem Impsum" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quas optio nam perferendis possimus, soluta odio accusantium illo assumenda id quaerat minima dolor omnis vero delectus praesentium! Ex, tenetur amet" note={5.1} price={150} />
-                        <Card image={produit1} name="Lorem Impsum" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quas optio nam perferendis possimus, soluta odio accusantium illo assumenda id quaerat minima dolor omnis vero delectus praesentium! Ex, tenetur amet" note={4.1} price={150} />
-                        <Card image={produit2} name="Lorem Impsum" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quas optio nam perferendis possimus, soluta odio accusantium illo assumenda id quaerat minima dolor omnis vero delectus praesentium! Ex, tenetur amet" note={3.1} price={150} />
-                        <Card image={produit2} name="Lorem Impsum" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quas optio nam perferendis possimus, soluta odio accusantium illo assumenda id quaerat minima dolor omnis vero delectus praesentium! Ex, tenetur amet" note={5.1} price={150} />
-                        <Card image={produit2} name="Lorem Impsum" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quas optio nam perferendis possimus, soluta odio accusantium illo assumenda id quaerat minima dolor omnis vero delectus praesentium! Ex, tenetur amet" note={5.1} price={150} />
-                        <Card image={produit2} name="Lorem Impsum" description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis quas optio nam perferendis possimus, soluta odio accusantium illo assumenda id quaerat minima dolor omnis vero delectus praesentium! Ex, tenetur amet" note={1.1} price={150} />
+                        {all_component_products && all_component_products}
                     </div>
                 </div>
             </div>
-            <div className="content_panier h-min-100">
-                <div className="block h-full max-w-sm p-6 bg-white border border-gray-200 ">
-                    <div className="content_title">
-                        <FaShoppingCart />
-                        <h1>Panier</h1>
+
+            {all_component_in_panier.length > 0 &&
+
+                (<div className="content_panier">
+                    <div className="block h-full max-w-sm p-6 bg-white border border-gray-200 ">
+                        <div className="content_title">
+                            <FaShoppingCart />
+                            <h1>Panier</h1>
+                        </div>
+                        <hr className="my-3" />
+
+                        {all_component_in_panier}
+
                     </div>
-                    <hr className="my-3" />
+                </div>)
+            }
 
-                    <BuyOne produit1={produit1} />
-
-                </div>
-            </div>
 
         </div>
     );

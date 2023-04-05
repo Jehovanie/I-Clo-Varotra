@@ -1,6 +1,6 @@
 import { combineReducers } from "@reduxjs/toolkit";
 
 import auth from "./auth"
-import globalActions from "./globalActions";
+import market from "./market";
 
-export default combineReducers({ auth, globalActions })
+export default combineReducers({ auth, market })

@@ -9,11 +9,11 @@ const Carousel = ({ image, name }) => {
                 <MiniCard image={image} name={name} />
                 <MiniCard image={image} name={name} />
                 <MiniCard image={image} name={name} />
+
                 <MiniCard image={image} name={name} />
                 <MiniCard image={image} name={name} />
                 <MiniCard image={image} name={name} />
-                <MiniCard image={image} name={name} />
-                <MiniCard image={image} name={name} />
+
                 <MiniCard image={image} name={name} />
                 <MiniCard image={image} name={name} />
                 <MiniCard image={image} name={name} />

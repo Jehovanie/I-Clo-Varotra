@@ -3,6 +3,13 @@
     width: 80%;
 }
 
+.content_panier {
+    display: block;
+    width: 20%;
+    min-height: 100vh;
+}
+
+
 .content_global {
     display: block;
     width: 95%;
