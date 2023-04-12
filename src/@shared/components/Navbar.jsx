@@ -8,7 +8,7 @@ import { TOGGLE_PANIER } from "../../redux/@shared/constant";
 const Navbar = () => {
     const dispatch = useDispatch();
     return (
-        <nav>
+        <nav className="nav_component">
             <div className="container bg-gray-100 flex flex-wrap justify-between items-center mx-auto py-2 md:px-6 ">
                 <Link to="/" className="flex items-center">
                     <img src={logo} className="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />

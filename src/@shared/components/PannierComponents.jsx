@@ -12,7 +12,7 @@ const PannierComponents = () => {
     ))
 
     return (
-        <div className="block h-full max-w-sm p-6 bg-white border border-gray-200 ">
+        <div className="panier_component max-w-sm p-6 bg-white border border-gray-200 ">
             <div className="content_title">
                 <FaShoppingCart />
                 <h1>Panier</h1>

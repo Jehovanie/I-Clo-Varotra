@@ -17,6 +17,8 @@ const Carousel = ({ image, name }) => {
                 <MiniCard image={image} name={name} />
                 <MiniCard image={image} name={name} />
                 <MiniCard image={image} name={name} />
+
+                <MiniCard image={image} name={name} />
             </div>
             {/* <!-- Slider indicators --> */}
             <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">

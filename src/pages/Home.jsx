@@ -3,9 +3,7 @@ import List from "../@shared/components/List";
 import Navlink from "../@shared/components/Navlink";
 
 import "./../@assets/css/home.css"
-import "./../@assets/js/home.js"
 
-import produit1 from "./../@assets/produit/image1.png"
 import produit2 from "./../@assets/produit/image2.png"
 import Carousel from "../@shared/components/Carousel";
 import { useSelector } from "react-redux";
