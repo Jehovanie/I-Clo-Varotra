@@ -3,13 +3,13 @@ import List from "../@shared/components/List";
 import Navlink from "../@shared/components/Navlink";
 
 import "./../@assets/css/home.css"
+import "./../@assets/js/home.js"
 
 import produit1 from "./../@assets/produit/image1.png"
 import produit2 from "./../@assets/produit/image2.png"
-import { FaShoppingCart } from "react-icons/fa";
-import BuyOne from "../@shared/components/BuyOne";
 import Carousel from "../@shared/components/Carousel";
 import { useSelector } from "react-redux";
+import PannierComponents from "../@shared/components/PannierComponents";
 const Home = () => {
     const all_categories = [{ link: "/", text: "Tous les categories" }, { link: "baute", text: "Bauté" }, { link: "nformatique", text: "Informatique" }, { link: "sport", text: "Sport" }];
     const data = useSelector((state) => state.market)
@@ -17,14 +17,9 @@ const Home = () => {
     const all_component_products = data?.products.map((product, key) => (
         <Card key={key} product={product} />
     ))
-
-    const all_component_in_panier = data?.panier.products.map((product, key) => (
-        <BuyOne key={key} product={product} />
-    ))
-
     return (
         <div className="flex">
-            <div className="content_corp">
+            <div className={data.panier.isShow ? "content_corp anim_corp_show_pannier" : "content_corp anim_corp_hide_pannier"}>
 
                 <div className="content_top p-3">
                     <h3> Top 10 </h3>
@@ -47,21 +42,9 @@ const Home = () => {
                 </div>
             </div>
 
-            {all_component_in_panier.length > 0 &&
-
-                (<div className="content_panier">
-                    <div className="block h-full max-w-sm p-6 bg-white border border-gray-200 ">
-                        <div className="content_title">
-                            <FaShoppingCart />
-                            <h1>Panier</h1>
-                        </div>
-                        <hr className="my-3" />
-
-                        {all_component_in_panier}
-
-                    </div>
-                </div>)
-            }
+            <div className={data.panier.isShow ? "content_panier anim_show_panier" : "content_panier anim_hide_panier"}>
+                <PannierComponents />
+            </div>
 
 
         </div>
