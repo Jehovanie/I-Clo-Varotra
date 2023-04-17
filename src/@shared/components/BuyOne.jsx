@@ -1,32 +1,47 @@
 import { useEffect, useState } from "react";
 import produit1 from "./../../@assets/produit/image1.png"
+import "./../../@assets/css/buy.css"
+import { useDispatch } from "react-redux";
+import { ADD_QUANTITY, CANCEL_BUY, DEL_QUANTITY } from "../../redux/@shared/constant";
 
 
 const BuyOne = ({ product }) => {
-    const { titre: name, description, origin, fournisseur, stock, price, image, note } = product;
-    const [quantity, setQuantity] = useState(1)
+    console.log(product)
+    const { id, titre: name, description, origin, fournisseur, stock, price, image, note, category, quantity } = product;
     const [total_price, setTotalPrice] = useState(quantity * price);
+    const dispatch = useDispatch();
+
     const handleDescremented = () => {
         if (quantity > 1) {
-            setQuantity((prev) => prev - 1)
+            dispatch({ type: DEL_QUANTITY, payload: { id, category } })
         }
     }
 
     const handleIncremented = () => {
         if (quantity < stock) {
-            setQuantity((prev) => prev + 1);
+            dispatch({ type: ADD_QUANTITY, payload: { id, category } })
+        }
+    }
+
+    const cancelBuyOne = () => {
+
+        if (confirm("Vous voulez vraiment annuler?")) {
+            dispatch({ type: CANCEL_BUY, payload: { id, category } })
+        } else {
+            console.log("keep object")
         }
     }
 
     useEffect(() => {
-        setTotalPrice((prev) => prev + (quantity * price))
+        setTotalPrice(quantity * price)
     }, [quantity])
 
     return (
         <div className="flex flex-col items-center mb-2 bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
             <img className="p-4 h-50 w-1/2" src={produit1} alt={name} />
-            <div className="flex flex-col justify-between p-4 leading-normal">
+            <div className="flex flex-col justify-between p-4 leading-normal content_text">
                 <p className="mb-2 tracking-tight text-gray-900">{name}</p>
+                <p className="cancel_buy" onClick={cancelBuyOne}>X</p>
                 <div className="content_contenu flex mt-2">
                     <button
                         type="button"

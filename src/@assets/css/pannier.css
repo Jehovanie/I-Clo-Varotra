@@ -1,0 +1,11 @@
+.list_products_panier {
+    display: block;
+}
+
+.content_tow_cta_panier {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    right: 0px;
+    padding: 10px;
+}

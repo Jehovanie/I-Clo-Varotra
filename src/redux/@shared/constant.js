@@ -7,5 +7,8 @@ export const SIGNUP = "SIGNUP";
 export const HOME = "HOME";
 export const ADD_TO_PANIER = "ADD_TO_PANIER";
 export const TOGGLE_PANIER = "TOGGLE_PANIER";
+export const ADD_QUANTITY = "ADD_QUANTITY";
+export const DEL_QUANTITY = "DEL_QUANTITY";
+export const CANCEL_BUY = "CANCEL_BUY";
 
 export const TEST = "TEST"

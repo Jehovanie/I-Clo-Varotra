@@ -8,8 +8,9 @@ import produit2 from "./../@assets/produit/image2.png"
 import Carousel from "../@shared/components/Carousel";
 import { useSelector } from "react-redux";
 import PannierComponents from "../@shared/components/PannierComponents";
+
 const Home = () => {
-    const all_categories = [{ link: "/", text: "Tous les categories" }, { link: "baute", text: "Bauté" }, { link: "nformatique", text: "Informatique" }, { link: "sport", text: "Sport" }];
+    const all_categories = [{ link: "/", text: "Tous les categories" }, { link: "baute", text: "Bauté" }, { link: "informatique", text: "Informatique" }, { link: "sport", text: "Sport" }];
     const data = useSelector((state) => state.market)
 
     const all_component_products = data?.products.map((product, key) => (

@@ -1,0 +1,19 @@
+.content_text {
+    display: block;
+    position: relative;
+}
+
+.cancel_buy {
+    display: block;
+    position: absolute;
+    top: -1%;
+    right: 10%;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cancel_buy:hover {
+    transform: scale(1.1);
+}
