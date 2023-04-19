@@ -6,7 +6,6 @@ import { ADD_QUANTITY, CANCEL_BUY, DEL_QUANTITY } from "../../redux/@shared/cons
 
 
 const BuyOne = ({ product }) => {
-    console.log(product)
     const { id, titre: name, description, origin, fournisseur, stock, price, image, note, category, quantity } = product;
     const [total_price, setTotalPrice] = useState(quantity * price);
     const dispatch = useDispatch();

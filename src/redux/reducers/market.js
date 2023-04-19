@@ -45,8 +45,9 @@ const market = (state = { "massage": "E-clo-varotra", panier: { isShow: false, p
             return { ...state, panier: { ...new_panier, total: calculTotalAmount(new_panier.products) } }
 
         case CANCEL_BUY:
-            var new_panier = { ...state.panier, products: state.panier.products.filter(({ id, category }) => id !== action.payload.id && category !== action.payload.category) }
-            return { ...state, panier: { ...new_panier, isShow: !!new_panier.products.length > 0, total: calculTotalAmount(new_panier.products) } }
+            console.log(state.panier.products)
+            var new_panier = { ...state.panier, products: state.panier.products.filter(({ id, category }) => { return (id !== action.payload.id) || (category !== action.payload.category) }) }
+            return { ...state, panier: { ...new_panier, isShow: !!new_panier.products.length, total: calculTotalAmount(new_panier.products) } }
 
 
         case TOGGLE_PANIER:
