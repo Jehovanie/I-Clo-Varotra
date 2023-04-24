@@ -72,7 +72,7 @@ const Card = ({ product }) => {
                         <div className="p-2">
                             <div className="w-full flex flex-col items-center bg-white md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800">
                                 <img className="w-full h-100 md:h-auto md:w-1/2" src={produit1} alt={name} />
-                                <div className="flex flex-col p-4 w-full">
+                                <div className="flex flex-col p-5 w-full">
                                     <div className="element">
                                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{name}</h5>
                                         <p className="value price c-yellow-300 hover:color-yellow-500"> {`${price}€`} </p>
@@ -96,27 +96,29 @@ const Card = ({ product }) => {
                                         <p className="value"> {stock} (pieces)</p>
                                     </div>
 
+                                    <button
+                                        data-modal-hide="defaultModal"
+                                        type="button"
+                                        className="text-white bg-yellow-300 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800"
+                                        onClick={() => addToPannier(category, id)}
+                                    >
+                                        Acheter des maintenat
+                                    </button>
+
                                 </div>
                             </div>
 
                         </div>
-                        {/* Modal footer */}
+                        {/* Modal footer
                         <div className="flex justify-end items-center p-2 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                            <button
-                                data-modal-hide="defaultModal"
-                                type="button"
-                                className="text-white bg-yellow-300 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800"
-                                onClick={() => addToPannier(category, id)}
-                            >
-                                Acheter des maintenat
-                            </button>
+
                             {/* <button data-modal-hide="defaultModal" type="button" className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Annuler</button> */}
-                        </div>
+                        {/* </div> */}
                     </div>
                 </div>
             </div>
 
-        </div>
+        </div >
 
     )
 }

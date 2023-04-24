@@ -10,5 +10,6 @@ export const TOGGLE_PANIER = "TOGGLE_PANIER";
 export const ADD_QUANTITY = "ADD_QUANTITY";
 export const DEL_QUANTITY = "DEL_QUANTITY";
 export const CANCEL_BUY = "CANCEL_BUY";
+export const CHANGE_CATEGORY = "CHANGE_CATEGORY"
 
 export const TEST = "TEST"

@@ -1,4 +1,6 @@
 
+import "./../../@assets/css/list.css"
+
 const List = ({ children }) => {
     return (
         <li>
