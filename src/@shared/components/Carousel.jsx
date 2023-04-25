@@ -6,17 +6,17 @@ const Carousel = ({ image, name }) => {
         <div id="default-carousel" className="relative w-full" data-carousel="static">
             {/* <!-- Carousel wrapper --> */}
             <div className="relative h-28 overflow-hidden rounded-lg">
-                <MiniCard image={image} name={name} />
-                <MiniCard image={image} name={name} />
-                <MiniCard image={image} name={name} />
+                <MiniCard image={image} name={name} active={true} />
+                <MiniCard image={image} name={name} active={true} />
+                <MiniCard image={image} name={name} active={true} />
 
-                <MiniCard image={image} name={name} />
-                <MiniCard image={image} name={name} />
-                <MiniCard image={image} name={name} />
+                <MiniCard image={image} name={name} active={false} />
+                <MiniCard image={image} name={name} active={false} />
+                <MiniCard image={image} name={name} active={false} />
 
-                <MiniCard image={image} name={name} />
-                <MiniCard image={image} name={name} />
-                <MiniCard image={image} name={name} />
+                <MiniCard image={image} name={name} active={false} />
+                <MiniCard image={image} name={name} active={false} />
+                <MiniCard image={image} name={name} active={false} />
 
                 <MiniCard image={image} name={name} />
             </div>

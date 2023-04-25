@@ -3,7 +3,7 @@ import { ADD_TO_PANIER, TOGGLE_PANIER, HOME, TEST, ADD_QUANTITY, DEL_QUANTITY, C
 import { calculTotalAmount } from "../actions/market";
 
 
-const market = (state = { "massage": "E-clo-varotra", panier: { isShow: false, products: [], total: 0 }, default_productst: dataFake, products: dataFake }, action) => {
+const market = (state = { "massage": "E-clo-varotra", panier: { isShow: false, products: [], total: 0 }, default_products: dataFake, products: dataFake }, action) => {
 
 
     switch (action.type) {
@@ -14,9 +14,9 @@ const market = (state = { "massage": "E-clo-varotra", panier: { isShow: false, p
 
         case CHANGE_CATEGORY:
             if (action.payload !== "Tous les categories") {
-                return { ...state, products: state.default_productst.filter(item => item.category.charAt(0).toUpperCase() + item.category.substr(1, item.category.length) === action.payload) }
+                return { ...state, products: state.default_products.filter(item => item.category.charAt(0).toUpperCase() + item.category.substr(1, item.category.length) === action.payload) }
             }
-            return { ...state, products: state.default_productst }
+            return { ...state, products: state.default_products }
         case ADD_TO_PANIER:
             if (!state.panier.products.some(({ id, category }) => id === action.payload.id && category === action.payload.category)) {
                 var new_products = [...state.panier.products, { ...state.products.find(({ id, category }) => id === action.payload.id && category === action.payload.category), quantity: 1 }]

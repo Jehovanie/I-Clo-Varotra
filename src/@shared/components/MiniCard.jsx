@@ -1,7 +1,7 @@
 
-const MiniCard = ({ image, name }) => {
+const MiniCard = ({ image, name, active }) => {
     return (
-        <div className="md:w-1/4 sm:w-1/3 xs:w-full hidden duration-700 ease-in-out" data-carousel-item>
+        <div className="md:w-1/4 sm:w-1/3 xs:w-full hidden duration-700 ease-in-out" data-carousel-item={active}>
             <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                 <img className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src={image} alt={name} />
                 <div className="flex flex-col justify-between p-4 leading-normal">

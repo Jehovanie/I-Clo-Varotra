@@ -12,7 +12,7 @@ const Navbar = () => {
             <div className="container bg-gray-100 flex flex-wrap justify-between items-center mx-auto py-2 md:px-6 ">
                 <Link to="/" className="flex items-center">
                     <img src={logo} className="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
-                    <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">E-clo-varotra</span>
+                    <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white sm:none">E-clo-varotra</span>
                 </Link>
                 <div className="flex items-center">
                     {/* <NavLink to="signin" className="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">Login</NavLink> */}
