@@ -1,18 +1,18 @@
 import Card from "../@shared/components/Card";
 import List from "../@shared/components/List";
 import Navlink from "../@shared/components/Navlink";
+import CarrouselComponent from "../@shared/components/CarrouselComponent";
+import PannierComponents from "../@shared/components/PannierComponents";
 
 import "./../@assets/css/home.css"
 
-import produit2 from "./../@assets/produit/image2.png"
-import Carousel from "../@shared/components/Carousel";
 import { useDispatch, useSelector } from "react-redux";
-import PannierComponents from "../@shared/components/PannierComponents";
 import { useEffect, useState } from "react";
 import { CHANGE_CATEGORY } from "../redux/@shared/constant";
 
 const Home = () => {
     const [all_categories, setAllCategories] = useState([]);
+    const [dataCarousel, setDataCarousel] = useState([]);
     const temp_categories = [{ link: "/", text: "Tous les categories", active: true }]
     const data = useSelector((state) => state.market)
     const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const Home = () => {
             }
         })
         setAllCategories(temp_categories)
-
+        setDataCarousel(data.products)
     }, [])
 
 
@@ -54,7 +54,7 @@ const Home = () => {
                 <div className="content_top p-3">
                     <h3> Top 10 </h3>
                     <hr className="my-2" />
-                    <Carousel image={produit2} name="Produit 2" />
+                    <CarrouselComponent dataCarousel={dataCarousel} />
                 </div>
 
                 <div className="container flex flex-wrap items-center justify-center mx-auto">
