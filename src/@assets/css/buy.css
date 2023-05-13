@@ -17,3 +17,16 @@
 .cancel_buy:hover {
     transform: scale(1.1);
 }
+
+.content_image_carrousel img {
+    height: 90%;
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+@media screen and (max-width:500px) {
+    .content_image_carrousel img {
+        width: 60%;
+    }
+}

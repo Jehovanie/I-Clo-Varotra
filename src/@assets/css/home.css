@@ -1,3 +1,8 @@
+:root {
+    --width_corp_show_pannier: 80%;
+    --width_show_pannier: 20%;
+}
+
 .content_corp {
     display: block;
     /* width: 80%; */
@@ -21,9 +26,10 @@
 .content_panier {
     display: block;
     width: 0%;
-    min-height: 100vh;
+    max-height: 90vh;
     opacity: 0;
     margin-right: 20px;
+    overflow: hidden;
 }
 
 .anim_show_panier {
@@ -54,23 +60,40 @@
     font-size: 1.5rem;
 }
 
+.panier_component {
+    position: fixed;
+    height: 90vh;
+    min-width: var(--width_show_pannier);
+}
+
+.content_modal {
+    z-index: 1000;
+}
+
+@media screen and (max-width:500px) {
+    :root {
+        --width_corp_show_pannier: 0%;
+        --width_show_pannier: 100%;
+    }
+}
+
 @keyframes corp_show_pannier {
     0% {
-        width: 100%;
+        width: calc(var(--width_corp_show_pannier) + var(--width_show_pannier));
     }
 
     100% {
-        width: 80%;
+        width: var(--width_corp_show_pannier);
     }
 }
 
 @keyframes corp_hide_pannier {
     0% {
-        width: 80%;
+        width: var(--width_corp_show_pannier);
     }
 
     100% {
-        width: 100%;
+        width: calc(var(--width_corp_show_pannier) + var(--width_show_pannier));
     }
 }
 
@@ -82,14 +105,14 @@
 
     100% {
         opacity: 1;
-        width: 20%;
+        width: var(--width_show_pannier);
     }
 }
 
 @keyframes hide_panier {
     0% {
         opacity: 1;
-        width: 20%;
+        width: var(--width_show_pannier)
     }
 
     100% {

@@ -10,11 +10,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 350px;
 }
 
 .price {
     font-size: 2rem;
     font-weight: bolder;
     color: w;
+}
+
+.content_image {
+    display: block;
+    min-height: 100%;
+
 }

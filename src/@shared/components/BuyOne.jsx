@@ -37,13 +37,13 @@ const BuyOne = ({ product }) => {
 
     return (
         <div className="flex flex-col items-center mb-2 bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-            <img className="p-4 h-50 w-1/2" src={produit1} alt={name} />
+            <img className="p-4 h-50 md:w-1/2" src={produit1} alt={name} />
             <div className="flex flex-col justify-between p-4 leading-normal content_text">
                 <p className="mb-2 tracking-tight text-gray-900">{name}</p>
-                <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                {/* <button data-modal-target="popup-modal" data-modal-toggle="popup-modal" className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
                     X
-                </button>
-                {/* <p className="cancel_buy" onClick={cancelBuyOne}>X</p> */}
+                </button> */}
+                <p className="cancel_buy" onClick={cancelBuyOne}>X</p>
                 <div className="content_contenu flex mt-2">
                     <button
                         type="button"

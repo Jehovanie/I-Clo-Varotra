@@ -1,5 +1,13 @@
 .list_products_panier {
     display: block;
+    height: 82%;
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.list_products_panier::-webkit-scrollbar {
+    display: none;
 }
 
 .content_tow_cta_panier {
