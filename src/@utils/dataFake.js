@@ -2,7 +2,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 1,
         category: "informatique",
-        titre: "Telephone Portable",
+        titre: "Projecteur",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -14,7 +14,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 2,
         category: "informatique",
-        titre: "Telephone Portable",
+        titre: "Modem/Flash",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -26,7 +26,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 3,
         category: "informatique",
-        titre: "Telephone Portable",
+        titre: "Onduleur",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -38,7 +38,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 4,
         category: "informatique",
-        titre: "Telephone Portable",
+        titre: "Clavier et Souris",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -50,7 +50,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 5,
         category: "informatique",
-        titre: "Telephone Portable",
+        titre: "Imprimante",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -62,7 +62,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 6,
         category: "Telephone",
-        titre: "Telephone Portable",
+        titre: "Nokia",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -74,7 +74,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 7,
         category: "Telephone",
-        titre: "Telephone Portable",
+        titre: "Iphone",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -86,7 +86,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 8,
         category: "Telephone",
-        titre: "Telephone Portable",
+        titre: "Aqous",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -98,7 +98,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 9,
         category: "Telephone",
-        titre: "Telephone Portable",
+        titre: "Sony/x-peria",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -110,7 +110,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 10,
         category: "Telephone",
-        titre: "Telephone Portable",
+        titre: "Read-me",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -122,7 +122,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 11,
         category: "Telephone",
-        titre: "Telephone Portable",
+        titre: "Window Phone",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -134,7 +134,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 12,
         category: "Ordinateur",
-        titre: "Telephone Portable",
+        titre: "Asus Rog ",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -146,7 +146,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 13,
         category: "Ordinateur",
-        titre: "Telephone Portable",
+        titre: "Accer/hp",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -158,7 +158,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 14,
         category: "Ordinateur",
-        titre: "Telephone Portable",
+        titre: "Dell Insipiron",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -170,7 +170,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 15,
         category: "Ordinateur",
-        titre: "Telephone Portable",
+        titre: "Mac Book Pro",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -182,7 +182,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 16,
         category: "Ordinateur",
-        titre: "Telephone Portable",
+        titre: "ThinkPad",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -194,7 +194,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 17,
         category: "Ordinateur",
-        titre: "Telephone Portable",
+        titre: "Dell Latitude",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -206,7 +206,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 18,
         category: "Ordinateur",
-        titre: "Telephone Portable",
+        titre: "Panasonic",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -218,7 +218,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 19,
         category: "Appareil Photo",
-        titre: "Telephone Portable",
+        titre: "Nikon",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -230,7 +230,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 20,
         category: "Appareil Photo",
-        titre: "Telephone Portable",
+        titre: "Canon",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -242,7 +242,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 21,
         category: "Appareil Photo",
-        titre: "Telephone Portable",
+        titre: "Pixel",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -254,7 +254,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 22,
         category: "Appareil Photo",
-        titre: "Telephone Portable",
+        titre: "IPhone X",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -266,7 +266,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 23,
         category: "Appareil Photo",
-        titre: "Telephone Portable",
+        titre: "Objectif",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -278,7 +278,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 24,
         category: "Appareil Photo",
-        titre: "Telephone Portable",
+        titre: "Zooming",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",
@@ -290,7 +290,7 @@ export const dataFake = [ ///titre, description, origin, fournisseur, stock, pri
     {
         id: 25,
         category: "Appareil Photo",
-        titre: "Telephone Portable",
+        titre: "Drônne",
         image: "image.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, odio minima odit placeat sapiente est omnis ducimus error qui voluptatum voluptas! Rem voluptatem magni ullam non facere dolorem iure modi.",
         origin: "Madagascar",

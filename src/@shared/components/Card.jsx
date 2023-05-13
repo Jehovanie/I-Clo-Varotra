@@ -1,5 +1,4 @@
 import { useDispatch } from "react-redux";
-import { handlePayment } from "../../@utils/api_airtle";
 import { MdReadMore } from "react-icons/md";
 import { FaShoppingCart } from "react-icons/fa";
 import produit1 from "./../../@assets/produit/image1.png"
@@ -7,6 +6,7 @@ import produit1 from "./../../@assets/produit/image1.png"
 
 import "./../../@assets/css/details.css"
 import { ADD_TO_PANIER } from "../../redux/@shared/constant";
+import ModalDetails from "./ModalDetails";
 
 
 const Card = ({ product }) => {
@@ -39,8 +39,9 @@ const Card = ({ product }) => {
                     <img className="p-8 rounded-t-lg" src={produit1} alt={name} />
                 </a>
                 <div className="px-5 pb-5">
+                    <h2 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" >{name}</h2>
                     <a href="#">
-                        <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{description.length > 50 ? description.substring(0, 20) + "..." : description}</h5>
+                        <h5 className="mb-3 text-gray-500 dark:text-gray-400">{description.length > 50 ? description.substring(0, 20) + "..." : description}</h5>
                     </a>
                     <div className="flex items-center mt-2.5 mb-5">
                         {start_note}
@@ -56,70 +57,14 @@ const Card = ({ product }) => {
                             >
                                 + <FaShoppingCart />
                             </button>
-                            <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                            <button data-modal-target={"defaultModal_" + id} data-modal-toggle={"defaultModal_" + id} className="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
                                 <MdReadMore />
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-            {/*  Main modal details  */}
-            <div id="defaultModal" tabIndex="-1" aria-hidden="true" className="fixed top-0 left-0 right-0 z-50 hidden w-auto p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
-                <div className="relative w-full h-full max-w-2xl md:h-auto">
-                    {/* Modal content */}
-                    <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                        {/* Modal body */}
-                        <div className="p-2">
-                            <div className="w-full flex flex-col items-center bg-white md:flex-row md:max-w-xl dark:border-gray-700 dark:bg-gray-800">
-                                <img className="w-full h-100 md:h-auto md:w-1/2" src={produit1} alt={name} />
-                                <div className="flex flex-col p-5 w-full">
-                                    <div className="element">
-                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{name}</h5>
-                                        <p className="value price c-yellow-300 hover:color-yellow-500"> {`${price}€`} </p>
-                                    </div>
-                                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                                        {description}
-                                    </p>
-
-                                    <div className="element">
-                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Origin</h5>
-                                        <p className="value"> {origin} </p>
-                                    </div>
-
-                                    <div className="element">
-                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Fournisseur</h5>
-                                        <p className="value"> {fournisseur} </p>
-                                    </div>
-
-                                    <div className="element">
-                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Stock</h5>
-                                        <p className="value"> {stock} (pieces)</p>
-                                    </div>
-
-                                    <button
-                                        data-modal-hide="defaultModal"
-                                        type="button"
-                                        className="text-white bg-yellow-300 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800"
-                                        onClick={() => addToPannier(category, id)}
-                                    >
-                                        Acheter des maintenat
-                                    </button>
-
-                                </div>
-                            </div>
-
-                        </div>
-                        {/* Modal footer
-                        <div className="flex justify-end items-center p-2 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-
-                            {/* <button data-modal-hide="defaultModal" type="button" className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Annuler</button> */}
-                        {/* </div> */}
-                    </div>
-                </div>
-            </div>
-
+            <ModalDetails product={product} />
         </div >
 
     )
