@@ -1,10 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 import Details from "../@shared/components/Details";
 import App from "../App";
-import Baute from "../pages/Baute";
-import Home from "../pages/Home";
-import Sport from "../pages/Sport";
-import Technologie from "../pages/Technologie";
+import Baute from "../pages/public/Baute";
+import Home from "../pages/public/Home";
+import Sport from "../pages/public/Sport";
+import Technologie from "../pages/public/Technologie";
+
+import Signin from "../pages/Signin";
+import Signup from "../pages/Signup";
+import Dashboard from "../pages/private/Dashboard";
 
 
 const router = createBrowserRouter([
@@ -24,7 +28,6 @@ const router = createBrowserRouter([
                         element: <Details />
                     }
                 ]
-
             },
             {
                 path: "informatique",
@@ -33,6 +36,26 @@ const router = createBrowserRouter([
             {
                 path: "sport",
                 element: <Sport />
+            }
+        ]
+    },
+    {
+        path: "admin",
+        children: [
+            {
+                index: true, element: <Signin />
+            },
+            {
+                path: "signin",
+                element: <Signin />
+            },
+            {
+                path: "signup",
+                element: <Signup />
+            },
+            {
+                path: "dashboard",
+                element: <Dashboard />
             }
         ]
     }

@@ -1,14 +1,14 @@
-import Card from "../@shared/components/Card";
-import List from "../@shared/components/List";
-import Navlink from "../@shared/components/Navlink";
-import CarrouselComponent from "../@shared/components/CarrouselComponent";
-import PannierComponents from "../@shared/components/PannierComponents";
+import Card from "../../@shared/components/Card";
+import List from "../../@shared/components/List";
+import Navlink from "../../@shared/components/Navlink";
+import CarrouselComponent from "../../@shared/components/CarrouselComponent";
+import PannierComponents from "../../@shared/components/PannierComponents";
 
-import "./../@assets/css/home.css"
+import "./../../@assets/css/home.css"
 
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { CHANGE_CATEGORY } from "../redux/@shared/constant";
+import { CHANGE_CATEGORY } from "../../redux/@shared/constant";
 
 const Home = () => {
     const [all_categories, setAllCategories] = useState([]);
