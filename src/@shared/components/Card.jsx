@@ -5,7 +5,7 @@ import produit1 from "./../../@assets/produit/image1.png"
 
 
 import "./../../@assets/css/details.css"
-import { ADD_TO_PANIER } from "../../redux/@shared/constant";
+import { ADD_TO_PANIER } from "../../@service/@shared/constant";
 import ModalDetails from "./ModalDetails";
 
 

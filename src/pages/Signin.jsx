@@ -1,17 +1,19 @@
 import React from 'react';
 import logo from "./../@assets/logo.png"
 import "./../@assets/css/auth.css"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
+import { actionLogin } from '../@service/actions/auth';
 
 
 const Signin = () => {
     const { register, handleSubmit } = useForm();
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const onSubmit = (data) => {
-        console.log(data)
+        dispatch(actionLogin(data, navigate));
     }
     return (
         <div className="content_global">
@@ -19,7 +21,7 @@ const Signin = () => {
                 <section className="bg-gray-50 dark:bg-gray-900">
                     <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                         <Link to="/" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-                            <img src={logo} className="h-45 mr-3 sm:h-9" alt="E-clo-varotra" />
+                            <img src={logo} className="md:h-45 sm:h-20 h-20 mr-3" alt="E-clo-varotra" />
                         </Link>
                         <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -39,6 +41,7 @@ const Signin = () => {
 
                                         <input type="password"
                                             {...register("password", { required: true })}
+                                            autoComplete="true"
                                             className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                         />
                                     </div>

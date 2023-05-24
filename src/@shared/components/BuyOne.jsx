@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import produit1 from "./../../@assets/produit/image1.png"
 import "./../../@assets/css/buy.css"
 import { useDispatch } from "react-redux";
-import { ADD_QUANTITY, CANCEL_BUY, DEL_QUANTITY } from "../../redux/@shared/constant";
+import { ADD_QUANTITY, CANCEL_BUY, DEL_QUANTITY } from "../../@service/@shared/constant";
 
 
 const BuyOne = ({ product }) => {

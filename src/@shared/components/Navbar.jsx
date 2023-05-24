@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../@assets/logo.png"
 import { FaShoppingCart } from "react-icons/fa";
 import { useDispatch } from "react-redux";
-import { TOGGLE_PANIER } from "../../redux/@shared/constant";
+import { TOGGLE_PANIER } from "../../@service/@shared/constant";
 
 const Navbar = () => {
     const dispatch = useDispatch();

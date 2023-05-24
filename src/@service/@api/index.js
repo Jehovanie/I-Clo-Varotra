@@ -10,4 +10,5 @@ url.interceptors.request.use((req) => {
 })
 
 
-export const login = (form_data) => url.post("/siging", form_data)
+export const login = (form_data) => url.post("/signin", form_data)
+export const signup = (form_data) => url.post("/signup", form_data)

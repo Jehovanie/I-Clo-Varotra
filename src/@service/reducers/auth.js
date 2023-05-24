@@ -4,7 +4,7 @@ const auth = (state = { auth_data: null }, action) => {
     switch (action.type) {
         case LOGIN:
             if (action?.payload.token) {
-                localStorage.setItem("user", JSON.stringify(...action?.payload.token))
+                localStorage.setItem("user", JSON.stringify(action.payload.token))
             }
             return { ...state, auth_data: action.payload }
 
@@ -13,8 +13,9 @@ const auth = (state = { auth_data: null }, action) => {
             return { ...state, auth_data: null }
 
         case SIGNUP:
+            console.log(action.payload)
             if (action?.payload.token) {
-                localStorage.setItem("user", JSON.stringify(...action?.payload.token))
+                localStorage.setItem("user", JSON.stringify(action.payload.token))
             }
             return { ...state, auth_data: action.payload }
 

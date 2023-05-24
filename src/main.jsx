@@ -6,7 +6,7 @@ import router from './@routes/route'
 import './index.css'
 
 import { Provider } from 'react-redux'
-import reducer from "./redux/reducers/index";
+import reducer from "./@service/reducers/index";
 
 const store = configureStore({ reducer })
 

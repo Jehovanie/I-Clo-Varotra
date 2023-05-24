@@ -8,7 +8,7 @@ import "./../../@assets/css/home.css"
 
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { CHANGE_CATEGORY } from "../../redux/@shared/constant";
+import { CHANGE_CATEGORY } from "../../@service/@shared/constant";
 
 const Home = () => {
     const [all_categories, setAllCategories] = useState([]);
