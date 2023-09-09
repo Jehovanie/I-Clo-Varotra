@@ -25,7 +25,7 @@ const Home = () => {
         })
         setAllCategories(temp_categories)
         setDataCarousel(data.products)
-    }, [])
+    }, [temp_categories])
 
 
     const all_component_products = data?.products.map((product, key) => (
