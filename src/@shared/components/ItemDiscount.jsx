@@ -5,7 +5,7 @@ const ItemDiscount = () => {
     return (
         <div className='block w-full p-0'>
             <div className='w-full mb-0 '> 
-               <h5 className='text-white font-medium font-semibold'>20%</h5> 
+               <h5 className='text-white font-semibold'>20%</h5> 
             </div>
             <div className='flex items-center justify-evenly gap-3'>
                 <div className="block w-1/4">

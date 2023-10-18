@@ -9,13 +9,13 @@ function BeforeNavBar(props) {
                 </a>
                 
                 <div className='flex gap-2 text-lg leading-normal font-medium font-montserrat max-lg:hidden wide:mr-24'>
-                    <select name="select_unit_price" id="id_unit_price" defaultValue={"MGA"} className='border-none text-md font-bolder focus:white focus:white'> 
+                    <select name="select_unit_price" id="id_unit_price" defaultValue={"MGA"} className='border-none text-md font-bolder focus:ring-0 focus:white focus:white'> 
                         <option value="MGA">MGA </option>
                         <option value="USA"> USA</option>
                         <option value="USD"> USD</option>
                     </select>
 
-                    <select name="select_nation_name" id="id_nation_name" className='border-none text-md font-bolder'>
+                    <select name="select_nation_name" id="id_nation_name" className='border-none text-md font-bolder focus:ring-0'>
                         <option value="Madagascar"> Madagascar</option>
                         <option value="Etas-Unies"> Nation-Unis</option>
                         <option value="Canada"> Canada </option>

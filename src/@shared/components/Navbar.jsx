@@ -10,7 +10,7 @@ const Navbar = () => {
     const dispatch = useDispatch();
     return (
         <nav className="nav_component">
-            <div className="container bg-gray-100 flex flex-wrap justify-between items-center mx-auto py-2 md:px-6 ">
+            <div className="bg-gray-100 flex flex-wrap justify-between items-center mx-auto py-2 md:px-6 ">
                 <Link to="/" className="flex items-center">
                     <img src={logo} className="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
                     <span className="self-center text-xl font-semibold whitespace-nowrap sm:none">E-clo-varotra</span>
