@@ -3,7 +3,7 @@ import logo from "../../assets/logo.png";
 import { FaShoppingCart } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { TOGGLE_PANIER } from "../../@service/@shared/constant";
-import SearchInput from "./SearchInput";
+import SearchInput from "../molecule/SearchInput";
 
 const Navbar = () => {
 	const dispatch = useDispatch();

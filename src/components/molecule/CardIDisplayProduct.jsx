@@ -1,6 +1,7 @@
 import produit1 from "./../../assets/produit/image1.png";
+import DiscountPriceUI from "./DiscountPriceUI";
 
-const ItemDiscount = () => {
+const CardIDisplayProduct = () => {
 	return (
 		<div className="block w-full p-0">
 			<div className="w-full mb-0 ">
@@ -18,8 +19,7 @@ const ItemDiscount = () => {
 					</p>
 					<div>etoile</div>
 					<div>
-						<p className="font-thin line-through text-red-500"> $ 1.673.6000</p>
-						<h3 className="font-extrabold text-md text-blue-600"> $ 1.873.000</h3>
+						<DiscountPriceUI price={"1.249.999"} priceOff={"1.199.999"} />
 					</div>
 				</div>
 			</div>
@@ -27,4 +27,4 @@ const ItemDiscount = () => {
 	);
 };
 
-export default ItemDiscount;
+export default CardIDisplayProduct;
