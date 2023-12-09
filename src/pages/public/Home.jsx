@@ -77,7 +77,7 @@ const Home = () => {
 
                 <div className="w-full h-full flex justify-center items-center gap-3">
                     <div className="block w-1/4">
-                        <FlashDeal />
+                        <FlashDeal time={3}/>
                     </div>
                     <div className="block w-3/4">
                         <Carrousel />

@@ -4,7 +4,7 @@ function AfterNavbar() {
 
 
     const listCategory= [1,2,3,4,5,6,7].map((item, index) => {
-        return <option className='text-lg font-thin'> Category {index+1} </option>
+        return <option key={index + "_option_category"} className='text-lg font-thin'> Category {index+1} </option>
     })
 
     const listLink= [
@@ -15,8 +15,8 @@ function AfterNavbar() {
         { name: "Seller Zone", link: "#"},
     ];
 
-    const listLink_Html= listLink.map(item => {
-        return <li> <a href={item.link} className='font-montserrat leading-normal font-normal text-gray-500 text-base'>{item.name}</a></li>
+    const listLink_Html= listLink.map((item, index ) => {
+        return <li key={index + "_listLink"}> <a href={item.link} className='font-montserrat leading-normal font-normal text-gray-500 text-base'>{item.name}</a></li>
     })
 
     return (
