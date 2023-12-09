@@ -1,4 +1,4 @@
-import { dataFake } from "../../@utils/dataFake";
+import { dataFake } from "../../@core/data_fake/dataFake";
 import { ADD_TO_PANIER, TOGGLE_PANIER, HOME, TEST, ADD_QUANTITY, DEL_QUANTITY, CANCEL_BUY, CHANGE_CATEGORY } from "../@shared/constant";
 import { calculTotalAmount } from "../actions/market";
 

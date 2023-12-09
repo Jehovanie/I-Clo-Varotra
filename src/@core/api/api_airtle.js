@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API_AIRTEL_CLIENT_ID, API_AIRTEL_CLIENT_SECRET, API_URL } from "../@shared/constant/api"
+import { API_AIRTEL_CLIENT_ID, API_AIRTEL_CLIENT_SECRET, API_URL } from "../../@shared/constant/api"
 /**
  * this call to the back
  */
